@@ -1,5 +1,4 @@
 import mongoose, { Schema } from 'mongoose'
-import Item from '../item/model'
 
 const ordersSchema = new Schema({
   ordered_by: {
@@ -11,7 +10,7 @@ const ordersSchema = new Schema({
     enum: ['Pending', 'Done']
   },
   items: [{
-    item: Item,
+    item: String,
     qty: { type: Number }
   }]
 }, {
